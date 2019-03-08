@@ -2,9 +2,13 @@
 
 .single_restaurant_container {
 	max-width: 600px;
-	margin: 20px auto;
-
+	margin: 40px auto;
 }
+
+.single_restaurant_container:last-child {
+	margin: 40px auto 0px;
+}
+
 .single_restaurant {
 	display: flex;
 	background-color: #F3F3F3;
