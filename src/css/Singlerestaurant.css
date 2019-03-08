@@ -21,15 +21,15 @@
 	box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.20);
 	background-color: #FFFFFF;
 }
-.img_container {
+.single_restaurant .img_container {
 	width: 40%;
 }
 
-.img_container img {
+.single_restaurant .img_container img {
 	width: 100%;
 }
 
-.title_container {
+.single_restaurant .title_container {
 	display: flex;
 	width: 60%;
 	flex-direction: column;
@@ -37,18 +37,18 @@
 	padding-left: 42px;
 }
 
-.title_container h3 {
+.single_restaurant .title_container h3 {
 	font-weight: 500;
 }
 
-.title {
+.single_restaurant .title {
 	margin: 0;
 }
 
-.rate {
+.single_restaurant .rate {
 	margin-top: 20px;
 }
-.arrow_container {
+.single_restaurant .arrow_container {
 	display: flex;
 	align-items: center;
 }
