@@ -11,8 +11,16 @@
 	box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
 	padding: 20px 40px 20px 20px;
 	font-family: lato;
+	cursor: pointer;
+	transition: all 0.6s;
 }
 
+.single_restaurant:hover {
+	-webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.20);
+	box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.20);
+	background-color: #FFFFFF;
+}
 .img_container {
 	width: 40%;
 }
