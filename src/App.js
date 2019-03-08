@@ -1,12 +1,66 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Popup from "reactjs-popup";
+
+
+import restaurantList from './mock-restaurant-list.json';
 import SingleRestaurant from './singleRestaurant';
+import DetailRestaurant from './detailRestaurant';
+
+
 
 class App extends Component {
+  state = {
+    restaurant: [],
+    isOpenModal: false,
+    focusedRestaurant: {}
+  }
+  componentDidMount() {
+    this.setState({ restaurant: restaurantList })
+  }
+
+  openDetailModal(restaurant) {
+    console.log(restaurant)
+    this.setState({ focusedRestaurant: restaurant })
+    this.setState({ isOpenModal: true })
+    console.log(this.state.isOpenModal)
+  }
+
+  closeDetailModal() {
+    this.setState({ isOpenModal: false })
+  }
+
   render() {
     return (
       <div className="App">
-        <SingleRestaurant/>
+        <ul>
+          {
+            this.state.restaurant.map((item, index) =>
+              <div
+                onClick={() => { this.openDetailModal(item) }}
+              >
+                <SingleRestaurant
+                  title={item.name}
+                  image={item.image}
+                  rate={item.rate}
+                  key={index}
+                />
+              </div>
+
+            )}
+        </ul>
+        <Popup
+          open={this.state.isOpenModal}
+          onClose={() => { this.closeDetailModal() }}
+          modal
+        >
+          <DetailRestaurant
+            name={this.state.focusedRestaurant.name}
+            description={this.state.focusedRestaurant.description}
+            menu={this.state.focusedRestaurant.menu}
+            rate={this.state.focusedRestaurant.rate}
+            image={this.state.focusedRestaurant.image}
+          />
+        </Popup>
       </div>
     );
   }
