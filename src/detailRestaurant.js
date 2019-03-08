@@ -28,14 +28,21 @@ class DetailRestaurant extends React.Component {
                     </div>
                     <div className="menu_container">
                         <h2>Menu</h2>
-                        <div className="menu_items">
-                            <div className="items">
-                                 <p>Cerises du chef</p>
-                            </div>
-                            <div className ="price">
-                                <p>1000 €</p>
-                            </div>
-                        </div>
+
+                        {
+                            this.props.menu.map((item, index) =>
+                                <div className="menu_items">
+
+                                    <div className="items">
+                                        <p>{item.title}</p>
+                                    </div>
+                                    <div className="price">
+                                        <p>{item.price}€</p>
+                                    </div>
+                                </div>
+
+                            )}
+
                     </div>
                 </div>
             </div>
