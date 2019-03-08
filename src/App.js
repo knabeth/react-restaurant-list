@@ -36,6 +36,7 @@ class App extends Component {
           {
             this.state.restaurant.map((item, index) =>
               <div
+                className="single_restaurant_container"
                 onClick={() => { this.openDetailModal(item) }}
               >
                 <SingleRestaurant
