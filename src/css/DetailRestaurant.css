@@ -31,6 +31,7 @@
 	flex-direction: column;
 	text-align: left;
 	border-bottom: solid 1px #D4D4D4;
+	padding-right: 15px;
 }
 
  .detail_restaurant .title_container h2 {
@@ -62,7 +63,11 @@
 .detail_restaurant .description_container {
 	text-align: justify;
 }
-
+.detail_restaurant .menu_container {
+	overflow-y: scroll;
+	height: 35vw;
+	padding-right: 15px;
+}
 .detail_restaurant .menu_container h2 {
 	font-weight: 500;
 }
