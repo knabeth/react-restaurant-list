@@ -54,7 +54,7 @@ class App extends Component {
           modal
         >
           <DetailRestaurant
-            name={this.state.focusedRestaurant.name}
+            title={this.state.focusedRestaurant.name}
             description={this.state.focusedRestaurant.description}
             menu={this.state.focusedRestaurant.menu}
             rate={this.state.focusedRestaurant.rate}
