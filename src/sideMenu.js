@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './css/SideMenu.css';
+import "./css/Header.css";
 
 class SideMenu extends Component {
     state = {
-        isOpen: true,
+        isOpen: false,
     }
 
     toggleMenu() {
@@ -16,7 +17,6 @@ class SideMenu extends Component {
     }
 
     render() {
-        var isOpen = false;
         return (
             <div
                 className="side_menu"
@@ -25,9 +25,8 @@ class SideMenu extends Component {
                     onClick={() => { this.toggleMenu() }}
                 > toggle </button>
                 <div
-                    className={this.state.isOpen ? "open" : "close"}
+                    className={this.state.isOpen ? "open menu_container" : "close menu_container"}
                 >
-                    YEAH
                 </div>
             </div>
         );

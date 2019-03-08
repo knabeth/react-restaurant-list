@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import Popup from "reactjs-popup";
-
-
 import restaurantList from './mock-restaurant-list.json';
-
 import SideMenu from './sideMenu';
 import SingleRestaurant from './singleRestaurant';
 import DetailRestaurant from './detailRestaurant';
-
-
+import './css/App.css'
 
 class App extends Component {
   state = {
@@ -34,8 +30,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SideMenu/>
-        <ul>
+      <header className="main_header">
+        <SideMenu/>
+      </header>
           {
             this.state.restaurant.map((item, index) =>
               <div
@@ -51,7 +48,6 @@ class App extends Component {
               </div>
 
             )}
-        </ul>
         <Popup
           open={this.state.isOpenModal}
           onClose={() => { this.closeDetailModal() }}
