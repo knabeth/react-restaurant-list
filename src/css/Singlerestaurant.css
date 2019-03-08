@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-.single_restaurant {
-	display: flex;
+.single_restaurant_container {
 	max-width: 600px;
 	margin: 20px auto;
+
+}
+.single_restaurant {
+	display: flex;
 	background-color: #F3F3F3;
 	border-radius: 4px;
 	-webkit-box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.75);
