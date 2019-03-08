@@ -3,6 +3,8 @@ import Popup from "reactjs-popup";
 
 
 import restaurantList from './mock-restaurant-list.json';
+
+import SideMenu from './sideMenu';
 import SingleRestaurant from './singleRestaurant';
 import DetailRestaurant from './detailRestaurant';
 
@@ -32,6 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <SideMenu/>
         <ul>
           {
             this.state.restaurant.map((item, index) =>

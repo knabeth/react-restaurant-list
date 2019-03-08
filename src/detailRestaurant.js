@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Component } from 'react';
+
 import './css/DetailRestaurant.css'
 
-class DetailRestaurant extends React.Component {
+class DetailRestaurant extends Component {
     render() {
         return (
             <div
