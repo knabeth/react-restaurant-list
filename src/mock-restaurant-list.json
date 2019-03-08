@@ -3,7 +3,24 @@
         "name": "Buzzshare",
         "image": "https://media-cdn.tripadvisor.com/media/photo-s/0e/cc/0a/dc/restaurant-chocolat.jpg",
         "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-        "menu": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "menu": [
+            {
+                "title": "Truffe noire d'hiver Tuber Melanosporum",
+                "price": 59
+            },
+            {
+                "title": "Truffe noire d'hiver Tuber Melanosporum",
+                "price": 59
+            },
+            {
+                "title": "Truffe noire d'hiver Tuber Melanosporum",
+                "price": 59
+            },
+            {
+                "title": "Truffe noire d'hiver Tuber Melanosporum",
+                "price": 59
+            }
+        ],
         "rate": 4
     },
     {

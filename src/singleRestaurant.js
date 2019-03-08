@@ -9,7 +9,6 @@ class SingleRestaurant extends Component {
         return (
             <div
              className="single_restaurant"
-             onClick={this.props.customClickEvent}
             >
                 <div className="img_container">
                     <img src={ this.props.image } />

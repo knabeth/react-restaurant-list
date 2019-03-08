@@ -1,40 +1,66 @@
 import React, { Component } from 'react';
+import Popup from "reactjs-popup";
+
+
 import restaurantList from './mock-restaurant-list.json';
 import SingleRestaurant from './singleRestaurant';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import DetailRestaurant from './detailRestaurant';
 
 
 
 class App extends Component {
   state = {
-    restaurant: []
+    restaurant: [],
+    isOpenModal: false,
+    focusedRestaurant: {}
   }
   componentDidMount() {
     this.setState({ restaurant: restaurantList })
   }
-  goToDetailPage(restaurant) {
-    console.log(restaurant)    
+
+  openDetailModal(restaurant) {
+    console.log(restaurant)
+    this.setState({ focusedRestaurant: restaurant })
+    this.setState({ isOpenModal: true })
+    console.log(this.state.isOpenModal)
   }
+
+  closeDetailModal() {
+    this.setState({ isOpenModal: false })
+  }
+
   render() {
     return (
       <div className="App">
         <ul>
           {
-          this.state.restaurant.map((item,index) => 
-          <div
-            onClick={() => {this.goToDetailPage(item)}}
-          >
-          <SingleRestaurant
-            title={item.name}
-            image={item.image}
-            rate={item.rate}
-            key={index}
-          />
-          </div>
-            
-          )}
-        </ul>
+            this.state.restaurant.map((item, index) =>
+              <div
+                onClick={() => { this.openDetailModal(item) }}
+              >
+                <SingleRestaurant
+                  title={item.name}
+                  image={item.image}
+                  rate={item.rate}
+                  key={index}
+                />
+              </div>
 
+            )}
+        </ul>
+        <Popup
+          open={this.state.isOpenModal}
+          onClose={() => { this.closeDetailModal() }}
+          modal
+        >
+          <DetailRestaurant
+            name={this.state.focusedRestaurant.name}
+            description={this.state.focusedRestaurant.description}
+            menu={this.state.focusedRestaurant.menu}
+            rate={this.state.focusedRestaurant.rate}
+            image={this.state.focusedRestaurant.image}
+          />
+        </Popup>
       </div>
     );
   }
