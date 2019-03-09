@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 .App {
   padding: 100px 0px;
   background-color: #F3F2F0;
+}
+
+p,span,input,h1,h2,h3,h4 {
+  font-family: lato;
 }
