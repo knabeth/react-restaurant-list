@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Popup from "reactjs-popup";
-import restaurantList from './mock-restaurant-list.json';
-import SideMenu from './sideMenu';
-import SingleRestaurant from './singleRestaurant';
-import DetailRestaurant from './detailRestaurant';
+import restaurantList from './datas/mock-restaurant-list.json';
+import SideMenu from './components/sideMenu';
+import SingleRestaurant from './components/singleRestaurant';
+import DetailRestaurant from './components/detailRestaurant';
 import './css/App.css'
 
 class App extends Component {

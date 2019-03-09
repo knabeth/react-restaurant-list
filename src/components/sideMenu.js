@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './css/SideMenu.css';
-import "./css/Header.css";
+import '../css/SideMenu.css';
+import "../css/Header.css";
 import LoginForm from "./LoginForm";
 
 class SideMenu extends Component {
