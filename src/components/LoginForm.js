@@ -9,20 +9,22 @@ class LoginForm extends Component {
 		users: [],
 		errorMessage: ""
 	}
+
 	logIn(e) {
-		e.preventDefault()
+		//e.preventDefault()
 		var hasValidId = false
-		this.state.users.map((user)=>{
+		this.state.users.map((user) => {
 			if (user.username == this.state.username && user.password == this.state.password) {
 				this.setState({ errorMessage: "" })
 				hasValidId = true
 				localStorage.setItem("username", user.username)
 				localStorage.setItem("userImage", user.image)
+
 			}
 			else if (!hasValidId) {
 				this.setState({ errorMessage: "Identifiants incorrect" })
-				setTimeout(()=> {
-					this.setState({ errorMessage: ""})
+				setTimeout(() => {
+					this.setState({ errorMessage: "" })
 				}, 3000)
 			}
 		})
@@ -34,31 +36,41 @@ class LoginForm extends Component {
 		this.setState({ password: e.target.value })
 	}
 	componentDidMount() {
-		this.setState({users: userlist})
+		this.setState({ users: userlist })
 	}
 	render() {
+		let sidebarContent
+		if (this.props.isLoged) {
+			sidebarContent =
+				<div>
+					<img className="user_image" src={localStorage.getItem("userImage")} />
+					<h2>{localStorage.getItem("username")}</h2>
+				</div>
+		} else {
+			sidebarContent = <form className="login_form" onSubmit={(e) => { this.logIn(e) }}>
+				<span className="error_message">
+					{this.state.errorMessage}
+				</span>
+				<input
+					type="text"
+					name="username"
+					placeholder="Identifiant"
+					value={this.state.username}
+					onChange={(e) => { this.usernameChange(e) }} />
+				<input
+					type="password"
+					name="password"
+					placeholder="Mot de passe"
+					value={this.state.password}
+					onChange={(e) => { this.passwordChange(e) }} />
+				<input
+					type="submit"
+					value="Valider" />
+			</form>
+		}
 		return (
 			<div className="login_form_container">
-				<form className="login_form" onSubmit={(e) => { this.logIn(e) }}>
-					<span className="error_message">
-						{this.state.errorMessage}
-					</span>
-					<input
-						type="text"
-						name="username"
-						placeholder="Identifiant"
-						value={this.state.username}
-						onChange={(e) => { this.usernameChange(e) }} />
-					<input
-						type="password"
-						name="password"
-						placeholder="Mot de passe"
-						value={this.state.password}
-						onChange={(e) => { this.passwordChange(e) }} />
-					<input
-						type="submit"
-						value="Valider" />
-				</form>
+				{sidebarContent}
 			</div>
 		);
 	}

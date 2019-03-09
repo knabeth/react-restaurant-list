@@ -22,7 +22,6 @@ class App extends Component {
     console.log(restaurant)
     this.setState({ focusedRestaurant: restaurant })
     this.setState({ isOpenModal: true })
-    console.log(this.state.isOpenModal)
   }
 
   closeDetailModal() {
@@ -32,7 +31,8 @@ class App extends Component {
   isUserLoged() {
     let userState = localStorage.getItem("username")
     if (userState != null) {
-      this.setState({isUserLoged: true})
+      //this.setState({isUserLoged: true})
+      return true;
     } 
   }
 
@@ -40,7 +40,9 @@ class App extends Component {
     return (
       <div className="App">
       <header className="main_header">
-        <SideMenu/>
+        <SideMenu
+          isLoged={this.isUserLoged()}
+        />
       </header>
           {
             this.state.restaurant.map((item, index) =>

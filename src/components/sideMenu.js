@@ -30,7 +30,9 @@ class SideMenu extends Component {
                     <div className="burger_bot"></div>
                 </div>
                 <div className={this.state.isOpen ? "open menu_container" : "close menu_container"}>
-                    <LoginForm/>
+                    <LoginForm
+                        isLoged={this.props.isLoged}
+                    />
                 </div>
             </div>
         );
