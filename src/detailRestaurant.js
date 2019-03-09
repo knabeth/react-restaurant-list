@@ -28,7 +28,6 @@ class DetailRestaurant extends Component {
                     </div>
                     <div className="menu_container">
                         <h2>Menu</h2>
-
                         {
                             this.props.menu.map((item, index) =>
                                 <div className="menu_items">

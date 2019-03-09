@@ -1,0 +1,25 @@
+.login_form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.login_form input[type="text"], .login_form input[type="password"] {
+	border-radius: 3px;
+	background-color: #46545D;
+	font-size: 18px;
+	margin-bottom: 10px;
+	height: 25px;
+	padding: 5px;
+	border: solid 2px #46545D;
+	color: #F3F2F0;
+}
+
+.login_form input[type="submit"] {
+	height: 30px;
+	color: #F3F2F0;
+	border-radius: 3px;
+	background-color: #477DEA;
+	border: none;
+	font-size: 18px;
+}
