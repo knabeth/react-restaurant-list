@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './css/Singlerestaurant.css'
-import right_arrow from "./assets/images/right_arrow.png"
+import '../css/Singlerestaurant.css'
+import right_arrow from "../assets/images/right_arrow.png"
 
 class SingleRestaurant extends Component {
 
