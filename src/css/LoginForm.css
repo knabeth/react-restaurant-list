@@ -28,11 +28,35 @@
 	display: block;
 	width: 100%;
 	height: 30px;
-	color: red;
+	color: rgb(109, 9, 9);
 	font-size: 18px;
 	text-align: center;
 }
 
 .user_image {
-	width: 100%;
+	width: 70%;
+	border-radius: 150px;
+	margin: 0 auto;
+	display: block;
+}
+
+.username {
+	color: #F3F2F0;
+	text-align: center;
+}
+
+.user_infos_container {
+	margin-top: 50px;
+}
+
+.logout_button {
+	height: 30px;
+	color: #F3F2F0;
+	border-radius: 3px;
+	background-color: rgb(109, 9, 9);
+	border: none;
+	font-size: 18px;
+	padding: 5px 10px;
+	margin: 0 auto;
+	display: block;
 }

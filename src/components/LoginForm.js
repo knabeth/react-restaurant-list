@@ -11,7 +11,7 @@ class LoginForm extends Component {
 	}
 
 	logIn(e) {
-		//e.preventDefault()
+		e.preventDefault()
 		var hasValidId = false
 		this.state.users.map((user) => {
 			if (user.username == this.state.username && user.password == this.state.password) {
@@ -19,7 +19,6 @@ class LoginForm extends Component {
 				hasValidId = true
 				localStorage.setItem("username", user.username)
 				localStorage.setItem("userImage", user.image)
-
 			}
 			else if (!hasValidId) {
 				this.setState({ errorMessage: "Identifiants incorrect" })
@@ -38,13 +37,21 @@ class LoginForm extends Component {
 	componentDidMount() {
 		this.setState({ users: userlist })
 	}
+	logOut() {
+		localStorage.clear()
+	}
 	render() {
 		let sidebarContent
 		if (this.props.isLoged) {
 			sidebarContent =
 				<div>
-					<img className="user_image" src={localStorage.getItem("userImage")} />
-					<h2>{localStorage.getItem("username")}</h2>
+					<div className="user_infos_container">
+						<img className="user_image" src={localStorage.getItem("userImage")} />
+						<h2 className="username">{localStorage.getItem("username")}</h2>
+					</div>
+					<button className="logout_button" onClick={()=> {this.logOut()}}>
+						Déconnexion
+					</button>
 				</div>
 		} else {
 			sidebarContent = <form className="login_form" onSubmit={(e) => { this.logIn(e) }}>
