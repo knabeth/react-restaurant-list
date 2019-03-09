@@ -11,14 +11,19 @@ class LoginForm extends Component {
 	}
 	logIn(e) {
 		e.preventDefault()
+		var hasValidId = false
 		this.state.users.map((user)=>{
 			if (user.username == this.state.username && user.password == this.state.password) {
-				this.setState({ errorMessage: "iozefdsof" })
-				console.log("MERDE")
-				return;
+				this.setState({ errorMessage: "" })
+				hasValidId = true
+				localStorage.setItem("username", user.username)
+				localStorage.setItem("userImage", user.image)
 			}
-			else {
-				this.setState({ errorMessage: "identifiants inccorect." })
+			else if (!hasValidId) {
+				this.setState({ errorMessage: "Identifiants incorrect" })
+				setTimeout(()=> {
+					this.setState({ errorMessage: ""})
+				}, 3000)
 			}
 		})
 	}

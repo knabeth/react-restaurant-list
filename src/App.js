@@ -10,10 +10,12 @@ class App extends Component {
   state = {
     restaurant: [],
     isOpenModal: false,
-    focusedRestaurant: {}
+    focusedRestaurant: {},
+    isUserLoged: false
   }
   componentDidMount() {
     this.setState({ restaurant: restaurantList })
+    this.isUserLoged()
   }
 
   openDetailModal(restaurant) {
@@ -25,6 +27,13 @@ class App extends Component {
 
   closeDetailModal() {
     this.setState({ isOpenModal: false })
+  }
+
+  isUserLoged() {
+    let userState = localStorage.getItem("username")
+    if (userState != null) {
+      this.setState({isUserLoged: true})
+    } 
   }
 
   render() {
