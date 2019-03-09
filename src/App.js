@@ -31,7 +31,6 @@ class App extends Component {
   isUserLoged() {
     let userState = localStorage.getItem("username")
     if (userState != null) {
-      //this.setState({isUserLoged: true})
       return true;
     } 
   }
