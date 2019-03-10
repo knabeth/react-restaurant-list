@@ -10,7 +10,6 @@ class LoginForm extends Component {
 		errorMessage: "",
 		isLoged: false
 	}
-
 	logIn(e) {
 		e.preventDefault()
 		var hasValidId = false
