@@ -7,7 +7,8 @@ class LoginForm extends Component {
 		username: "",
 		password: "",
 		users: [],
-		errorMessage: ""
+		errorMessage: "",
+		isLoged: false
 	}
 
 	logIn(e) {
@@ -19,6 +20,8 @@ class LoginForm extends Component {
 				hasValidId = true
 				localStorage.setItem("username", user.username)
 				localStorage.setItem("userImage", user.image)
+				this.setState({ isLoged: true })
+
 			}
 			else if (!hasValidId) {
 				this.setState({ errorMessage: "Identifiants incorrect" })
@@ -36,13 +39,15 @@ class LoginForm extends Component {
 	}
 	componentDidMount() {
 		this.setState({ users: userlist })
+		this.setState({isLoged: this.props.isLoged})
 	}
 	logOut() {
 		localStorage.clear()
+		this.setState({ isLoged: false })
 	}
 	render() {
 		let sidebarContent
-		if (this.props.isLoged) {
+		if (this.state.isLoged) {
 			sidebarContent =
 				<div>
 					<div className="user_infos_container">
