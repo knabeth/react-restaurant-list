@@ -20,7 +20,6 @@ class LoginForm extends Component {
 				localStorage.setItem("username", user.username)
 				localStorage.setItem("userImage", user.image)
 				this.setState({ isLoged: true })
-
 			}
 			else if (!hasValidId) {
 				this.setState({ errorMessage: "Identifiants incorrect" })
