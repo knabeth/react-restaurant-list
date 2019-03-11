@@ -10,49 +10,81 @@
     padding: 0 20px;
 }
 
-.side_menu .open {
+.side_menu.left .open {
     left: 0;
     transition: left 1s;
 }
 
-.side_menu .close {
+.side_menu.left .close {
     left: -240px;
     transition: left 1s;
 }
 
-.burger_menu_container {
+.side_menu.left .button_container {
     width: 50px;
     margin: 10px 0px 0px 10px;
 }
 
-.burger_menu_container div {
+.side_menu.left .button_container .bar {
     width: 100%;
     height: 2px;
     background-color:#f3f2f0;
     margin: 8px 0px;
 }
 
-.burger_menu_container.open .burger_top {
+.side_menu.left .button_container.open .burger_top {
     transform: rotate(45deg);
     position: relative;
     top: 13px;
     transition: all 0.5s;
 }
 
-.burger_menu_container.close .burger_top {
+.side_menu.left .button_container.close .burger_top {
     transition: all 0.5s;
 }
-.burger_menu_container.open .burger_mid {
+.side_menu.left .button_container.open .burger_mid {
     opacity: 0;
 }
 
-.burger_menu_container.open .burger_bot {
+.side_menu.left .button_container.open .burger_bot {
     transform: rotate(-45deg);
     position: relative;
     bottom: 7px;
     transition: all 0.5s;
 }
 
-.burger_menu_container.close .burger_bot {
+.side_menu.left .button_container.close .burger_bot {
     transition: all 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+.side_menu.right .open {
+    right: 0;
+    transition: right 1s;
+}
+
+.side_menu.right .close {
+    right: -240px;
+    transition: right 1s;
+}
+
+.side_menu.right .button_container {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+
+.button_icon {
+    width: 100%;
 }
