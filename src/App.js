@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   openDetailModal(restaurant) {
-    console.log(restaurant)
     this.setState({ focusedRestaurant: restaurant })
     this.setState({ isOpenModal: true })
   }
@@ -35,6 +34,12 @@ class App extends Component {
     } 
   }
 
+  filterByNote(event) {
+    let inputValue = event.target.value
+    let filteredElement = restaurantList.filter(item => item.rate >= inputValue && item.rate < inputValue + 1)
+    console.log(filteredElement)
+  }
+
   render() {
     return (
       <div className="App">
@@ -43,6 +48,16 @@ class App extends Component {
           isLoged={this.isUserLoged()}
         />
       </header>
+        <div className="filters_container">
+          <select onChange={(e) => {this.filterByNote(e)}}>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
           {
             this.state.restaurant.map((item, index) =>
               <div
