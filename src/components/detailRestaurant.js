@@ -4,12 +4,8 @@ import '../css/DetailRestaurant.css'
 class DetailRestaurant extends Component {
     render() {
         return (
-            <div
-                className="detail_restaurant"
-            >
-                <div
-                    className="left"
-                >
+            <div className="detail_restaurant">
+                <div className="left">
                     <div className="img_container">
                         <img src={this.props.image} />
                     </div>
@@ -24,7 +20,10 @@ class DetailRestaurant extends Component {
                         </h2>
                         <h3 className="rate">
                             {this.props.rate}/5
-                    </h3>
+                        </h3>
+                        <h3 className="category">
+                            {this.props.category}
+                        </h3>
                     </div>
                     <div className="menu_container">
                         <h2>Menu</h2>
@@ -39,7 +38,6 @@ class DetailRestaurant extends Component {
                                         <p>{item.price}€</p>
                                     </div>
                                 </div>
-
                             )}
 
                     </div>

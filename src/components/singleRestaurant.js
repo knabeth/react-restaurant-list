@@ -7,11 +7,9 @@ class SingleRestaurant extends Component {
     render() {
 
         return (
-            <div
-             className="single_restaurant"
-            >
+            <div className="single_restaurant">
                 <div className="img_container">
-                    <img src={ this.props.image } />
+                    <img src={this.props.image} />
                 </div>
                 <div className="title_container">
                     <h3 className="title">
@@ -19,6 +17,9 @@ class SingleRestaurant extends Component {
                     </h3>
                     <h3 className="rate">
                         {this.props.rate}/5
+                    </h3>
+                    <h3 className="category">
+                        {this.props.category}
                     </h3>
                 </div>
                 <div className="arrow_container">

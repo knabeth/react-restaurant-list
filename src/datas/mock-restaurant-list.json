@@ -17,7 +17,8 @@
                 "price": 1
             }
         ],
-        "rate": 0
+        "rate": 0,
+        "category": "FDP" 
     },
     {
         "name": "Cedrick & Kevin",
@@ -53,7 +54,8 @@
                 "price": 61
             }
         ],
-        "rate": 5
+        "rate": 5,
+        "category": "Cuisine Moléculaire"
     },
     {
         "name": "Buzzshare",
@@ -261,7 +263,8 @@
                 "price": 44
             }
         ],
-        "rate": 4
+        "rate": 4,
+        "category": "Pizzeria"
     },
     {
         "name": "Eamia",
@@ -469,7 +472,8 @@
                 "price": 60
             }
         ],
-        "rate": 3
+        "rate": 3,
+        "category": "Pizzeria"
     },
     {
         "name": "Yakijo",
@@ -677,7 +681,8 @@
                 "price": 20
             }
         ],
-        "rate": 4.4
+        "rate": 4.4,
+        "category": "Tradi"
     },
     {
         "name": "Skyndu",
@@ -885,7 +890,8 @@
                 "price": 61
             }
         ],
-        "rate": 3.2
+        "rate": 3.2,
+        "category": "Tradi"
     },
     {
         "name": "Digitube",
@@ -1093,7 +1099,8 @@
                 "price": 84
             }
         ],
-        "rate": 1.3
+        "rate": 1.3,
+        "category": "Pizzeria"
     },
     {
         "name": "DabZ",
@@ -1301,7 +1308,8 @@
                 "price": 84
             }
         ],
-        "rate": 2.5
+        "rate": 2.5,
+        "category": "Tradi"
     },
     {
         "name": "Thoughtbridge",
@@ -1509,7 +1517,9 @@
                 "price": 87
             }
         ],
-        "rate": 4.9
+        "rate": 4.9,
+        "category": "Junk food"
+
     },
     {
         "name": "Tazz",
@@ -1717,7 +1727,8 @@
                 "price": 56
             }
         ],
-        "rate": 5
+        "rate": 5,
+        "category": "Cuisine Moléculaire"
     },
     {
         "name": "Photojam",
@@ -1925,7 +1936,8 @@
                 "price": 34
             }
         ],
-        "rate": 2.1
+        "rate": 2.1,
+        "category": "Junk food"
     },
     {
         "name": "Dynazzy",
@@ -2133,6 +2145,7 @@
                 "price": 58
             }
         ],
-        "rate": 2.1
+        "rate": 2.1,
+        "category": "Pizzeria"
     }
 ]
